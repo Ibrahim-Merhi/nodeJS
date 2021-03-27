@@ -34,8 +34,11 @@ function startApp(name){
  * @returns {void}
  */
 function onDataReceived(text) {
-  if (text.trim() === 'quit') {
+  if (text.trim() === 'quit' ) {
     quit();
+  }
+  else if(text.trim() === 'exit'){
+    exit();
   }
   else if(text.trim() === 'hello'){
     hello();
@@ -77,6 +80,11 @@ function quit(){
   console.log('Quitting now, goodbye!')
   process.exit();
 }
+function exit(){
+  console.log('Quitting now, goodbye!')
+  process.exit();
+}
+
 
 // The following line starts the application
 startApp("Ibrahim Merhi")
