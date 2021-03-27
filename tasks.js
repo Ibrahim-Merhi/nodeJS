@@ -15,6 +15,7 @@ function startApp(name){
   process.stdin.on('data', onDataReceived);
   console.log(`Welcome to ${name}'s application!`)
   console.log("--------------------")
+  console.log("For more help write: help")
 }
 
 
@@ -37,11 +38,12 @@ function onDataReceived(text) {
   if (text.trim() === 'quit' || text.trim() === 'exit' ) {
     quit();
   }
-  /* else if(text.trim() === 'exit'){
-    exit();
-  } */
+ 
   else if(text.trim() === 'hello'){
     hello();
+  }
+  else if(text.trim() === 'help'){
+    help();
   }
   else{
     unknownCommand(text);
@@ -80,11 +82,10 @@ function quit(){
   console.log('Quitting now, goodbye!')
   process.exit();
 }
-/* function exit(){
-  console.log('Quitting now, goodbye!')
-  process.exit();
-} */
 
 
+function help(){
+  console.log('\n \b Below are the possible commands: \n', '\n', '   quit/exit: Quits the application\n\n','   help:Shows available commands\n\n','   hello: Show hello message\n',)
+}
 // The following line starts the application
 startApp("Ibrahim Merhi")
