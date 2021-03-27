@@ -82,7 +82,10 @@ function quit(){
   console.log('Quitting now, goodbye!')
   process.exit();
 }
-
+/**
+ * help function
+ * it will help you to understand and how to navigate and use the app
+ */
 
 function help(){
   console.log('\n \b Below are the possible commands: \n', '\n', '   quit/exit: Quits the application\n\n','   help:Shows available commands\n\n','   hello: Show hello message\n',)
