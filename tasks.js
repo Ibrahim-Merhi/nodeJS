@@ -9,6 +9,7 @@
  * @param  {string} name the name of the app
  * @returns {void}
  */
+var tasks = ['HTML' , 'CSS' , 'JavaScript' , 'React' , 'NodeJS']
 function startApp(name){
   process.stdin.resume();
   process.stdin.setEncoding('utf8');
@@ -36,13 +37,17 @@ function startApp(name){
  */
 function onDataReceived(text) {
 text= text.replace('\n','').trim();
-  var arrText = text.split(' ');
+var arrText = text.split(' ');
+
  
   if (text.trim() === 'quit' || text.trim() === 'exit' ) {
     quit();
   }
    else if(arrText[0].trim() === 'hello'){
     hello(arrText[1]);
+  }
+  else if(arrText[0].trim() === 'list'){
+    list();
   }
   else if(text.trim() === 'help'){
     help();
@@ -94,6 +99,20 @@ function quit(){
 
 function help(){
   console.log('\n \b Below are the possible commands: \n', '\n', '   quit/exit: Quits the application\n\n','   help:Shows available commands\n\n','   hello: Show hello message with "!" e.g: you write hello ibrahim it will show "hello ibrahim!" \n',)
+}
+
+/**
+ * list function 
+ */
+ function list() {
+  if (tasks.length > 0) {
+    tasks.forEach((task, index) => {
+      console.log(`Task ${index + 1}: ${task}`);
+    })
+  }
+  else {
+    console.log('Tasks list is empty!');
+  }
 }
 // The following line starts the application
 startApp("Ibrahim Merhi")
