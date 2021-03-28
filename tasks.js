@@ -149,8 +149,8 @@ function add(arrText) {
 function remove(arrText){
   if (arrText[1] === undefined){
     tasks.pop();
-  } else if (arrText[1]-1 >tasks.length){
-    console.log(" This task number does not exist!")
+  } else if (arrText[1]-1 >tasks.length)
+  { console.log(" This task number does not exist!")
   }
   else {
     tasks.splice(arrText[1]-1, 1)
