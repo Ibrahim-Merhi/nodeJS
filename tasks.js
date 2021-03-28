@@ -49,6 +49,9 @@ var arrText = text.split(' ');
   else if(arrText[0].trim() === 'list'){
     list();
   }
+  else if (arrText[0] === 'add'){
+    add(arrText);
+  }
   else if(text.trim() === 'help'){
     help();
   }
@@ -114,5 +117,28 @@ function help(){
     console.log('Tasks list is empty!');
   }
 }
+
+/**
+ * add function 
+ */
+
+function add(arrText) {
+  if (arrText[1] != undefined) {
+     let newTask = "";
+    arrText.forEach(text => {
+      if (text == "") return
+      newTask += `${text} `;
+    })
+    newTask = newTask.trim();
+    tasks.push(newTask);
+    console.log(`Task '${newTask}' was added`);
+
+  }
+  else {
+    console.log("Error: no tasks were given");
+  }
+}
+
+
 // The following line starts the application
 startApp("Ibrahim Merhi")
