@@ -41,7 +41,6 @@ text= text.replace('\n','').trim();
   if (text.trim() === 'quit' || text.trim() === 'exit' ) {
     quit();
   }
- 
    else if(arrText[0].trim() === 'hello'){
     hello(arrText[1]);
   }
