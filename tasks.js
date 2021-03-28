@@ -134,7 +134,7 @@ function quit(){
  */
 
 function help(){
-  console.log('\n \b Below are the possible commands: \n', '\n', '   quit/exit: Quits the application\n\n','   help:Shows available commands\n\n','   hello: Show hello message with "!" e.g: you write hello ibrahim it will show "hello ibrahim!" \n\n', '   list: Show all the tasks \n\n', '   add: add new task, e.g: you write "add task1" your task1 will be addedd to the task list \n\n', '   remove: remove task, e.g: you write "remove 1" your task1 will be removed from the task list  P.S: if you write "remove" the last task will be            removed\n\n', '   edit: edit task, e.g: you write "edit 1" your task1 will be edited from the task list \n\n')
+  console.log('\n \b Below are the possible commands: \n', '\n', '   quit/exit: Quits the application\n\n','   help:Shows available commands\n\n','   hello: Show hello message with "!" e.g: you write hello ibrahim it will show "hello ibrahim!" \n\n', '   list: Show all the tasks \n\n', '   add: add new task, e.g: you write "add task1" your task1 will be addedd to the task list \n\n', '   remove: remove task, e.g: you write "remove 1" your task1 will be removed from the task list  P.S: if you write "remove" the last task will be            removed\n\n', '   edit: edit task, e.g: you write "edit 1" your task1 will be edited from the task list \n\n', '   check: check task, e.g: you write "check 1" your task1 will be checked from the task list \n\n')
 }
 
 /**
