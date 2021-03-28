@@ -1,0 +1,22 @@
+[
+    {
+      "name": "HTML",
+      "done": false
+    },
+    {
+      "name": "CSS",
+      "done": false
+    },
+    {
+      "name": "Java Script",
+      "done": true
+    },
+    {
+      "name": "React",
+      "done": false
+    },
+    {
+      "name": "NodeJS",
+      "done": false
+    }
+  ]

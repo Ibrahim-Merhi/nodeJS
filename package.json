@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "fs": "^0.0.1-security",
+    "node": "^15.12.0",
+    "stack": "^0.1.0",
+    "stream": "^0.0.2"
+  }
+}
