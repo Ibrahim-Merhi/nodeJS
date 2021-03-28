@@ -93,7 +93,7 @@ function quit(){
  */
 
 function help(){
-  console.log('\n \b Below are the possible commands: \n', '\n', '   quit/exit: Quits the application\n\n','   help:Shows available commands\n\n','   hello: Show hello message\n',)
+  console.log('\n \b Below are the possible commands: \n', '\n', '   quit/exit: Quits the application\n\n','   help:Shows available commands\n\n','   hello: Show hello message with "!" e.g: you write hello ibrahim it will show "hello ibrahim!" \n',)
 }
 // The following line starts the application
 startApp("Ibrahim Merhi")
