@@ -82,6 +82,12 @@ var arrText = text.split(' ');
   else if(text.trim() === 'help'){
     help();
   }
+  else if (arrText[0] === 'check'){
+    check(arrText);
+  }
+  else if (arrText[0] === 'uncheck'){
+    unCheck(arrText);
+  }
   else{
     unknownCommand(text);
   }
@@ -135,7 +141,7 @@ function help(){
  * list function 
  */
  function list(){
- console.log(tasks);
+ 
  
   if (tasks.length > 0) {
     tasks.forEach((task, index) => {
@@ -202,6 +208,30 @@ function edit(arrText){
     tasks.splice(arrText[1]-1, 1, arrText.slice(2).join(" ")) 
   } else {
     tasks.splice(-1, 1, arrText.slice(1).join(" "))
+  }
+}
+
+/**
+ * check function 
+ */
+
+function check(arrText){
+  if(arrText[1]-1 < tasks.length){
+    tasks[arrText[1]-1].done = true;
+  }else{
+    console.log("choose a task number after CHECK")
+  }
+}
+
+/**
+ * uncheck function 
+ */
+
+function unCheck(arrText){
+  if(arrText[1]-1 < tasks.length){
+    tasks[arrText[1]-1 ].done = false;
+  }else{
+    console.log("choose a task number after CHECK")
   }
 }
 
