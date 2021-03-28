@@ -134,9 +134,9 @@ function help(){
 /**
  * list function 
  */
- function list()
+ function list(){
  console.log(tasks);
- {
+ 
   if (tasks.length > 0) {
     tasks.forEach((task, index) => {
       if (task.done) {
