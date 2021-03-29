@@ -9,9 +9,11 @@
  * @param  {string} name the name of the app
  * @returns {void}
  */
-import { readFileSync, writeFile } from 'fs';
-import { finished } from 'node:stream';
-var data = readFileSync('data.json');
+/* import { readFileSync, writeFile } from 'fs'; 
+import { finished } from 'node:stream';  */
+var fs = require('fs');
+var data = fs.readFileSync('data.json');
+ 
 var tasks = JSON.parse(data);
 function startApp(name){
   process.stdin.resume();
@@ -144,9 +146,9 @@ function help(){
  * add function 
  */
 
-function add(arrText) {
+ function add(arrText) {
   if (arrText[1] != undefined) {
-     let newTask = {
+    let newTask = {
       name: "",
       done: false
     };
@@ -158,13 +160,15 @@ function add(arrText) {
     tasks.push(newTask);
     console.log(`Task '${newTask.name}' was added`);
     var data = JSON.stringify(newTask);
-    writeFile('data.json', data, finished);
+    fs.writeFileSync('data.json',data, {flag:'a+'});
   }
   else {
     console.log("Error: no tasks were given");
   }
 }
-
+   
+  
+  
 /**
  * remove function 
  */
